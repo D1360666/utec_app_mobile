@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyAT</string>
+    <string name="edit_id">Ingrese Id de Actividad</string>
+    <string name="edit_nroEquipo">Nro de Equipo</string>
+    <string name="edit_nroContratista">Nro de Contratista</string>
+    <string name="btn_enviar">Enviar</string>
+</resources>

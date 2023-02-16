@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:numeric="integer"
+        android:text="@string/edit_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNro"
+        android:layout_width="146dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:numeric="integer"
+        android:text="@string/edit_nroEquipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cboMarca" />
+
+    <EditText
+        android:id="@+id/txtNro2"
+        android:layout_width="146dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:numeric="integer"
+        android:text="@string/edit_nroContratista"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtNro"
+        app:layout_constraintStart_toEndOf="@+id/txtNro" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:onClick="enviarNombre"
+        android:text="@string/btn_enviar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtId"
+        app:layout_constraintStart_toEndOf="@+id/txtId" />
+
+    <Spinner
+        android:id="@+id/cboTipoAct"
+        android:layout_width="318dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtId" />
+
+    <Spinner
+        android:id="@+id/cboTipoVehiculo"
+        android:layout_width="318dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cboTipoAct" />
+
+    <Spinner
+        android:id="@+id/cboCliente"
+        android:layout_width="314dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNro" />
+
+    <Spinner
+        android:id="@+id/cboContratista"
+        android:layout_width="314dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cboCliente" />
+
+    <Spinner
+        android:id="@+id/cboMarca"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cboTipoVehiculo" />
+
+    <Spinner
+        android:id="@+id/cboModelo"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/cboMarca"
+        app:layout_constraintTop_toBottomOf="@+id/cboTipoVehiculo" />
+
+    <EditText
+        android:id="@+id/txtActividad"
+        android:layout_width="314dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/cboContratista"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtActividad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
